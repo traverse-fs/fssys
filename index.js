@@ -3,9 +3,9 @@
  * Package: 
  * Author: Ganesh B
  * Description: Nnpm module to read write folder/files, fs util functions, traverse files and folder using code, or cli, or use glob patterns
- * Install: npm i fssys
+ * Install: npm i fssys --save
  * Github: https://github.com/ganeshkbhat/fssys
- * npmjs Link: 
+ * npmjs Link: https://www.npmjs.com/package/fssys
  * File: index.js
  * File Description: npm module to read write folder/files, fs util functions, traverse files and folder using code, or cli, or use glob patterns
  * 
