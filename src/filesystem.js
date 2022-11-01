@@ -1,16 +1,14 @@
 /**
  * 
- * Package: require-urls
+ * Package: fssys
  * Author: Ganesh B
  * Description: Nodejs npm module to traverse folder using code or cli or use glob patterns
- * Install: npm i require-urls --save
- * Github: https://github.com/ganeshkbhat/requireurl
- * npmjs Link: https://www.npmjs.com/package/require-urls
+ * Install: npm i fssys --save
+ * Github: https://github.com/traverse-fs/fssys
+ * npmjs Link: https://www.npmjs.com/package/fssys
  * File: src/filesystem.js
- * File Description: Using require-urls instead of require to fetch files from git repositories like Github or Bitbucket like repository directly
+ * File Description: 
  * 
- * git-rest: https://www.softwaretestinghelp.com/github-rest-api-tutorial/#:~:text=Log%20in%20to%20your%20GitHub,and%20click%20on%20Create%20Token.
- * Consider moving to different package with more utils: https://github.com/eligrey/FileSaver.js
 */
 
 /* eslint no-console: 0 */
@@ -112,3 +110,4 @@ module.exports._isinbuilt = _isinbuilt;
 module.exports._createFolders = _createFolders;
 module.exports._writeFile = _writeFile;
 module.exports._registerNodeCache = _registerNodeCache;
+

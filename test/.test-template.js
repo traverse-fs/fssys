@@ -1,11 +1,11 @@
 // /**
 //  * 
-//  * Package: 
+//  * Package: fssys
 //  * Author: Ganesh B
 //  * Description: 
-//  * Install: npm i require-urls --save
-//  * Github: https://github.com/ganeshkbhat/requireurl
-//  * npmjs Link: https://www.npmjs.com/package/require-urls
+//  * Install: npm i fssys --save
+//  * Github: https://github.com/traverse-fs/fssys
+//  * npmjs Link: https://www.npmjs.com/package/fssys
 //  * File: test-.js
 //  * Test for File: index.js
 //  * File Description: 

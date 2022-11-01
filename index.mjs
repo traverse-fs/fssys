@@ -1,13 +1,13 @@
 /**
  * 
- * Package: 
+ * Package: fssys
  * Author: Ganesh B
- * Description: Nodejs npm module to traverse folder using code or cli or use glob patterns
+ * Description: Npm module to read write folder/files, fs util functions, traverse files and folder using code, or cli, or use glob patterns
  * Install: npm i fssys --save
- * Github: https://github.com/ganeshkbhat/glob-traverse-fs
- * npmjs Link: 
- * File: index.js
- * File Description: Traverse and search files and folders in a directory support for ES files - core file
+ * Github: https://github.com/traverse-fs/fssys
+ * npmjs Link: https://www.npmjs.com/package/fssys
+ * File: index.mjs
+ * File Description: Npm module to read write folder/files, fs util functions, traverse files and folder using code, or cli, or use glob patterns
  * 
 */
 
@@ -15,6 +15,6 @@
 
 'use strict';
 
-import { default as traverse } from "./index.js";
+import * as fssys from "./index.js";
 
-export default { ...traverse };
+export default { ...fssys };
