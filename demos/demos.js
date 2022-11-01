@@ -6,7 +6,7 @@
  * Install: npm i fssys --save
  * Github: https://github.com/ganeshkbhat/fssys
  * npmjs Link: https://www.npmjs.com/package/fssys
- * File: demsos/demos.js
+ * File: demos/demos.js
  * File Description: npm module to read write folder/files, fs util functions, traverse files and folder using code, or cli, or use glob patterns
  * 
 */
