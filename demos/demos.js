@@ -6,7 +6,7 @@
  * Install: npm i fssys --save
  * Github: https://github.com/ganeshkbhat/fssys
  * npmjs Link: https://www.npmjs.com/package/fssys
- * File: index.js
+ * File: demsos/demos.js
  * File Description: npm module to read write folder/files, fs util functions, traverse files and folder using code, or cli, or use glob patterns
  * 
 */
@@ -14,11 +14,8 @@
 
 'use strict';
 
-const tfs = require("traverse-fs");
-const fsutils = require("./src/filesystem.js");
 
-module.exports = {
-    fsutils,
-    ...tfs
-};
+let fssys = require("../index.js");
+console.log(fssys);
+console.log(fssys.utils);
 
