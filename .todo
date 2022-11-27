@@ -1,0 +1,7 @@
+
+[TODO]
+
+- [] Add concurrency.js support to fssys
+- [] Add cli command support to fssys
+- [] Add cgijs support to fssys to execute scripts and executables
+    - [] Adds shelljs (via cgijs) support to fssys to execute unix/bash commands

@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/traverse-fs/fssys#readme",
   "dependencies": {
+    "cgijs": "^1.1.0",
+    "concurrency.js": "^0.0.23-beta",
     "traverse-fs": "^0.0.9"
   },
   "devDependencies": {
