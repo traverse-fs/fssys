@@ -89,6 +89,7 @@ async function _writeFile(localPath, data, options) {
             throw new Error("[require-urls]: filesystem.js: ", e.toString());
         }
     })
+    
     // try {
     //     options.logger("[require-urls]: filesystem.js: Writing fetched file to .jscache", localPath);
         
