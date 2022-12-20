@@ -21,7 +21,7 @@ const fscommands = require("./src/commands.js");
 module.exports = {
     utils: fsutils,
     fsutils: fsutils,
-    cmd: { ...fscommands },
+    command: { ...fscommands },
     ...tfs
 };
 
