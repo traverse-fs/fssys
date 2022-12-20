@@ -16,9 +16,11 @@
 
 const tfs = require("traverse-fs");
 const fsutils = require("./src/filesystem.js");
+const fscommands = require("./src/commands.js");
 
 module.exports = {
     fsutils,
+    fscommands,
     ...tfs
 };
 
