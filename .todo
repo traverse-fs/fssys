@@ -49,6 +49,10 @@ writeJsonSync
 Concurrency way of fast implementation
 https://github.com/danday74/shelljs.exec
 
+-------
+Check working with apis of commander and shelljs and piping
+https://www.npmjs.com/package/commander
+
 Commands:
     set, 
     ls, 
