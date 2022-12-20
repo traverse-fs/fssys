@@ -56,15 +56,15 @@ Usage: .cliArgs(argList)
 
 `searchFolder` Usage: .callbacks.searchFolder(d, f, searchPattern, flag = undefined)
 
-#### .fsutils.****\_****
+#### .utils.****\_****
 
 read write folder/files
 
-`_isinbuilt` Usage: .fsutils.\_isinbuilt(mod)
+`_isinbuilt` Usage: .utils.\_isinbuilt(mod)
 
-`_createFolders` Usage: .fsutils.\_createFolders(localGitDir)
+`_createFolders` Usage: .utils.\_createFolders(localGitDir)
 
-`_writeFile` Usage: .fsutils.\_writeFile(localPath, data, options)
+`_writeFile` Usage: .utils.\_writeFile(localPath, data, options)
 
-`_registerNodeCache` Usage: .fsutils.\_registerNodeCache(localGitFileCacheUrl, options)
+`_registerNodeCache` Usage: .utils.\_registerNodeCache(localGitFileCacheUrl, options)
 
