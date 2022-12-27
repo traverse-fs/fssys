@@ -15,7 +15,7 @@
     "url": "git+https://github.com/traverse-fs/fssys.git"
   },
   "scripts": {
-    "test": "mocha --reporter spec --recursive"
+    "test": "mocha --reporter spec --recursive --timeout 60000"
   },
   "author": "Ganesh Bhat",
   "bugs": {

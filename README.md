@@ -5,6 +5,9 @@ npm module to read write folder/files, fs util functions, traverse files and fol
 APIs to read write folder/files, fs util functions, traverse files and folder using code, or cli, or use glob patterns
 
 
+Find the demos in the [demos folder](./demos)
+
+
 ## traverse-fs functions
 [traverse-fs](https://www.npmjs.com/package/traverse-fs) functions, traverse files and folder using code, or cli, or use glob patterns
 
@@ -76,3 +79,13 @@ read write folder/files
 
 `_registerNodeCache` Usage: .fsutils._registerNodeCache(localGitFileCacheUrl, options)
 
+
+
+### Contributions
+
+Contributions, Feature Improvements, Bugs, and Issues are invited. [raising an issue](https://github.com/traverse-fs/fssys/issues)
+
+
+# License
+
+[MIT License](./LICENSE)
