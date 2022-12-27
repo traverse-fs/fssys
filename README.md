@@ -67,17 +67,13 @@ read write folder/files
 `_isinbuilt` Usage: .utils.\_isinbuilt(mod)
 
 `_createFolders` Usage: .utils.\_createFolders(localGitDir)
-<<<<<<< HEAD
 
 `_writeFile` Usage: .utils.\_writeFile(localPath, data, options)
 
 `_registerNodeCache` Usage: .utils.\_registerNodeCache(localGitFileCacheUrl, options)
-=======
->>>>>>> a73bdf359aca29f52f5d6cf503763b4ebf5429ef
 
 `_writeFile` Usage: .utils.\_writeFile(localPath, data, options)
 
-<<<<<<< HEAD
 
 ### Contributions
 
@@ -85,8 +81,5 @@ Contributions, Feature Improvements, Bugs, and Issues are invited. [raising an i
 
 
 # License
-=======
-`_registerNodeCache` Usage: .utils.\_registerNodeCache(localGitFileCacheUrl, options)
->>>>>>> a73bdf359aca29f52f5d6cf503763b4ebf5429ef
 
 [MIT License](./LICENSE)
