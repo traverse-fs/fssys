@@ -5,3 +5,77 @@
 - [] Add cli command support to fssys
 - [] Add cgijs support to fssys to execute scripts and executables
     - [] Adds shelljs (via cgijs) support to fssys to execute unix/bash commands
+
+
+- Methods
+
+- Async
+copy
+emptyDir
+ensureFile
+ensureDir
+ensureLink
+ensureSymlink
+mkdirp
+mkdirs
+move
+outputFile
+outputJson
+pathExists
+readJson
+remove
+writeJson
+
+
+- Sync
+copySync
+emptyDirSync
+ensureFileSync
+ensureDirSync
+ensureLinkSync
+ensureSymlinkSync
+mkdirpSync
+mkdirsSync
+moveSync
+outputFileSync
+outputJsonSync
+pathExistsSync
+readJsonSync
+removeSync
+writeJsonSync
+
+
+--------
+Concurrency way of fast implementation
+https://github.com/danday74/shelljs.exec
+
+-------
+Check working with apis of commander and shelljs and piping
+https://www.npmjs.com/package/commander
+
+Commands:
+    set, 
+    ls, 
+    sed, 
+    sort, 
+    cat, 
+    rm, 
+    mv, 
+    cp, 
+    mkdir, 
+    grep, 
+    find, 
+    echo, 
+    popd, 
+    pushd, 
+    chmod, 
+    cd, 
+    touch, 
+    whoami, 
+    ln, 
+    pwd, 
+    tail, 
+    tempdir, 
+    uniq, 
+    which,
+
