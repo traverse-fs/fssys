@@ -5,7 +5,7 @@
 - [] Add cli command support to fssys
 - [] Add cgijs support to fssys to execute scripts and executables
     - [] Adds shelljs (via cgijs) support to fssys to execute unix/bash commands
-
+- file read, stream, shared buffer - https://betterprogramming.pub/a-memory-friendly-way-of-reading-files-in-node-js-a45ad0cc7bb6
 
 - Methods
 
