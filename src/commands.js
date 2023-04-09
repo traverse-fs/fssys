@@ -21,7 +21,7 @@ var exec = require('shelljs.exec');
 
 
 // Write mixing for pipe function "to" to apply to all below methods
-function to() { }
+function to(args) { }
 
 // Command Refs: https://www.javatpoint.com/linux-commands
 function set(args) { }
@@ -85,7 +85,7 @@ function which(args) { }
 
 
 module.exports.set = Object.assign(set.prototype, to);
-module.exports.ls = Object.assign(ls.prototype, ls);
+module.exports.ls = Object.assign(ls.prototype, to);
 module.exports.sed = Object.assign(sed.prototype, to);
 module.exports.tee = Object.assign(tee.prototype, to);
 module.exports.tr = Object.assign(tr.prototype, to);
