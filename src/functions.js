@@ -60,11 +60,14 @@ export function renameFile(file, newDir) {
 export function getCurrentDirFilenames(dir) {
   const { dirname } = _isinbuilt()('path') // !!require ? require('path') : import('path');
   const { fileURLToPath } = _isinbuilt()('path') // !!require ? require('path') : import('url');
-  const __dirname = __dirname || dirname(fileURLToPath(import.meta.url));
+
+  const __filename = __filename || fileURLToPath(import.meta.url);
+  const __dirname = __dirname || path.dirname(__filename);
+
   return fs.readdirSync(dir)
-    // .forEach(file => {
-    //   console.log(file);
-    // });
+  // .forEach(file => {
+  //   console.log(file);
+  // });
 }
 
 export default {
