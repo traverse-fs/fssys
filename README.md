@@ -20,15 +20,21 @@ APIs to read write folder/files, fs util functions, traverse files and folder us
 
 ##### .\_isinbuilt
 
-Usage: .\_isinbuilt(mod)
+Usage: 
+
+.\_isinbuilt(mod)
 
 ##### .\_createFolders
 
-Usage: .\_createFolders(localGitDir)
+Usage: 
+
+.\_createFolders(localGitDir)
 
 ##### .\_writeFile
 
-Usage: .\_writeFile(localPath, data, options)
+Usage: 
+
+.\_writeFile(localPath, data, options)
 
 ## traverse-fs functions
 
@@ -36,63 +42,123 @@ Usage: .\_writeFile(localPath, data, options)
 
 ##### .search
 
-Usage: .search(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
+Usage: 
+
+.search(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
 
 ##### .filter
 
-Usage: .filter(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
+Usage: 
+
+.filter(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
 
 ##### .regex
 
-Usage: .regex(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { regex: "all", pattern: null, text: [] })
+Usage: 
+
+.regex(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { regex: "all", pattern: null, text: [] })
 
 ##### .dir
 
-Usage: .dir(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options = { before: () => { }, after: () => { } })
+Usage: 
+
+.dir(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options = { before: () => { }, after: () => { } })
 
 ##### .returnNestedArray
 
-Usage: .returnNestedArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "nestedarray", options)
+Usage: 
+
+.returnNestedArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "nestedarray", options)
 
 ##### .returnFlatArray
 
-Usage: .returnFlatArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "flatarray", options)
+Usage: 
+
+.returnFlatArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "flatarray", options)
 
 ##### .returnJSON
 
-Usage: .returnJSON(directory, recursive, fetchModifierCallback = defaultJSONFetch, handleProcessExit, errorHandler, type = "json", options)
+Usage: 
+
+.returnJSON(directory, recursive, fetchModifierCallback = defaultJSONFetch, handleProcessExit, errorHandler, type = "json", options)
 
 ##### .cliargs
 
-Usage: .cliArgs(argList)
+Usage: 
+
+.cliArgs(argList)
 
 #### .callbacks.\_\_\_
 
-`defaultFetch` Usage: .callbacks.defaultFetch(directory, fileDirent)
+`defaultFetch` 
 
-`jsonFetch` Usage: .callbacks.jsonFetch(directory, fileDirent)
+Usage: 
 
-`errorHandler` Usage: .callbacks.errorHandler(error)
+.callbacks.defaultFetch(directory, fileDirent)
 
-`search` Usage: .callbacks.search(d, f, searchPattern, flag = undefined)
+`jsonFetch` 
 
-`searchFiles` Usage: .callbacks.searchFiles(d, f, searchPattern, flag = undefined)
+Usage: 
 
-`searchFolder` Usage: .callbacks.searchFolder(d, f, searchPattern, flag = undefined)
+.callbacks.jsonFetch(directory, fileDirent)
+
+`errorHandler` 
+
+Usage: 
+
+.callbacks.errorHandler(error)
+
+`search` 
+
+Usage: 
+
+.callbacks.search(d, f, searchPattern, flag = undefined)
+
+`searchFiles` 
+
+Usage: 
+
+.callbacks.searchFiles(d, f, searchPattern, flag = undefined)
+
+`searchFolder` 
+
+Usage: 
+
+.callbacks.searchFolder(d, f, searchPattern, flag = undefined)
 
 #### .utils.\_\_\_
 
 read write folder/files
 
-`_isinbuilt` Usage: .utils.\_isinbuilt(mod)
+`_isinbuilt` 
 
-`_createFolders` Usage: .utils.\_createFolders(localGitDir)
+Usage: 
 
-`_writeFile` Usage: .utils.\_writeFile(localPath, data, options)
+.utils.\_isinbuilt(mod)
 
-`_registerNodeCache` Usage: .utils.\_registerNodeCache(localGitFileCacheUrl, options)
+`_createFolders` 
 
-`_writeFile` Usage: .utils.\_writeFile(localPath, data, options)
+Usage: 
+
+.utils.\_createFolders(localGitDir)
+
+`_writeFile` 
+
+Usage: 
+
+.utils.\_writeFile(localPath, data, options)
+
+`_registerNodeCache` 
+
+Usage: 
+
+.utils.\_registerNodeCache(localGitFileCacheUrl, options)
+
+`_writeFile` 
+
+Usage: 
+
+.utils.\_writeFile(localPath, data, options)
 
 ### Contributions
 
