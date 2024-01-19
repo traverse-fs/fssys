@@ -17,6 +17,14 @@
 
 const _isinbuilt = require("./filesystem");
 
+/**
+ *
+ *
+ * @export
+ * @param {*} file
+ * @param {*} newDir
+ * @return {*} 
+ */
 export function copyFile(file, newDir) {
   // //example, copy file1.htm from 'test/dir_1/' to 'test/'
   // copyFile('./test/dir_1/file1.htm', './test/');
@@ -39,6 +47,14 @@ export function copyFile(file, newDir) {
   });
 };
 
+/**
+ *
+ *
+ * @export
+ * @param {*} file
+ * @param {*} newDir
+ * @return {*} 
+ */
 export function moveFile(file, newDir) {
   // //move file1.htm from 'test/' to 'test/dir_1/'
   // moveFile('./test/file1.htm', './test/dir_1/');
@@ -49,6 +65,14 @@ export function moveFile(file, newDir) {
   return fs.renameSync(file, dest);
 };
 
+/**
+ *
+ *
+ * @export
+ * @param {*} file
+ * @param {*} newDir
+ * @return {*} 
+ */
 export function renameFile(file, newDir) {
   var fs = require('fs');
   var path = require('path');
@@ -57,6 +81,13 @@ export function renameFile(file, newDir) {
   return fs.renameSync(f, dest);
 }
 
+/**
+ *
+ *
+ * @export
+ * @param {*} dir
+ * @return {*} 
+ */
 export function getCurrentDirFilenames(dir) {
   const { dirname } = _isinbuilt()('path') // !!require ? require('path') : import('path');
   const { fileURLToPath } = _isinbuilt()('path') // !!require ? require('path') : import('url');
