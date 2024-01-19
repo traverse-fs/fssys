@@ -15,6 +15,8 @@
 
 'use strict';
 
+const _isinbuilt = require("./filesystem");
+
 export function copyFile(file, newDir) {
   // //example, copy file1.htm from 'test/dir_1/' to 'test/'
   // copyFile('./test/dir_1/file1.htm', './test/');
@@ -55,9 +57,9 @@ export function renameFile(file, newDir) {
   return fs.renameSync(f, dest);
 }
 
-export function getCurrentDirFilenames() {
-  const { dirname } = !!require ? require('path') : import('path');
-  const { fileURLToPath } = !!require ? require('path') : import('url');
+export function getCurrentDirFilenames(dir) {
+  const { dirname } = _isinbuilt()('path') // !!require ? require('path') : import('path');
+  const { fileURLToPath } = _isinbuilt()('path') // !!require ? require('path') : import('url');
   const __dirname = __dirname || dirname(fileURLToPath(import.meta.url));
   return fs.readdirSync(dir)
     // .forEach(file => {

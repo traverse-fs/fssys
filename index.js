@@ -15,12 +15,15 @@
 'use strict';
 
 const tfs = require("traverse-fs");
-const fsutils = require("./src/functions.js");
+const sysfuncs = require("./src/functions.js");
 const fsutils = require("./src/filesystem.js");
 const fscommands = require("./src/commands.js");
 
 module.exports = {
-    utils: fsutils,
+    utils: {
+        ...sysfuncs,
+        ...fsutils
+    },
     fsutils: fsutils,
     command: { ...fscommands },
     ...tfs
