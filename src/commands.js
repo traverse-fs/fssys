@@ -112,6 +112,10 @@ function ls(args) {
   return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "dir" : "ls", args);
 }
 
+function dir(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "dir" : "ls -l", args);
+}
+
 function dirtree(args) {
   return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "tree" : "ls -R", args);
 }
@@ -317,7 +321,7 @@ function sort(args) {
 }
 
 function cat(args) {
-  return bash("cat", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "type" : "cat", args);
 }
 
 function zcat(args) {
@@ -326,6 +330,18 @@ function zcat(args) {
 
 function rm(args) {
   return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "del" : "rm", args);
+}
+
+function mformat(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "format" : "mformat", args);
+}
+
+function vim(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "edit" : "vim", args);
+}
+
+function rmrf(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "rmdir" : "rm -rf", args);
 }
 
 function mv(args) {
@@ -385,7 +401,7 @@ function rmdir(args) {
 }
 
 function rename(args) {
-  return bash("rename", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "ren" : "mv", args);
 }
 
 function head(args) {
@@ -429,7 +445,7 @@ function pushd(args) {
 }
 
 function chmod(args) {
-  return bash("chmod", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "attrib" : "chmod", args);
 }
 
 function cd(args) {
@@ -514,6 +530,10 @@ function uniq(args) {
 
 function which(args) {
   return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "where" : "which", args);
+}
+
+function traceroute(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "tracert" : "traceroute", args);
 }
 
 module.exports.set = Object.assign(set.prototype, to);
