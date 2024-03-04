@@ -66,17 +66,6 @@ function shellcmds(cmd, args) {
 }
 
 /**
- * Write mixin for pipe using function "to" to apply to all below methods
- *
- * @param {*} args
- * @return {*} 
- */
-function to(args) {
-
-}
-
-
-/**
  *
  * 
  * Function composition is a way of 
@@ -84,9 +73,9 @@ function to(args) {
  *    It is a way of solving a problem 
  *    by reducing it into smaller solutions.
  * 
- * const compose = (f, g) => (args) => f(g(args));
+ * const compose = (f, g) => (args) => f(g(args)); // g(args) >>> f(result)
  * 
- * const compose = (f, g, h) => (args) => f(g(h(args)));
+ * const compose = (f, g, h) => (args) => f(g(h(args))); // f(args) >>> g(result) >>> h(result)
  * 
  * @param {*} f
  * @param {*} g
@@ -99,9 +88,9 @@ const compose = (f, g) => (args) => f(g(args));
  * The pipe is exactly the compose except, for one thing, 
  *    it works left to right. Let’s change our compose to a pipe
  * 
- * const pipe = (f, g) => (args) => h(g(args));
+ * const pipe = (f, g) => (args) => h(g(args));  // g(args) >>> h(result)
  * 
- * const pipe = (f, g, h) => (args) => h(g(f(args)));
+ * const pipe = (f, g, h) => (args) => h(g(f(args))); // f(args) >>> g(result) >>> h(result)
  * 
  *
  * @param {*} f
@@ -410,5 +399,7 @@ module.exports.passwd = Object.assign(passwd.prototype, to);
 module.exports.tempdir = Object.assign(tempdir.prototype, to);
 module.exports.uniq = Object.assign(uniq.prototype, to);
 module.exports.which = Object.assign(which.prototype, to);
+
 module.exports.compose = compose;
 module.exports.pipe = pipe;
+
