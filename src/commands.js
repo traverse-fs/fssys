@@ -105,19 +105,167 @@ const pipe = (f, g) => (args) => g(f(args));
 // Command Refs: https://www.javatpoint.com/linux-commands
 
 function set(args) {
-  return bash("set", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "set" : "export", args);
 }
 
 function ls(args) {
-  return bash("ls", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "dir" : "ls", args);
+}
+
+function dirtree(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "tree" : "ls -R", args);
+}
+
+function ps(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "tasklist" : "ps", args);
 }
 
 function sed(args) {
   return bash("sed", args);
 }
 
+function free(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "mem" : "free", args);
+}
+
+function du(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "chdisk" : "du", args);
+}
+
+function cron(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "at" : "cron", args);
+}
+
+function sudo(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "runas" : "sudo", args);
+}
+
+function curl(args) {
+  return bash("curl", args);
+}
+
+function rsync(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "robocopy" : "rsync", args);
+}
+
+function scp(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "pscp" : "scp", args);
+}
+
+function history(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "doskey /history" : "history", args);
+}
+
+function last(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "quser" : "last", args);
+}
+
+function nmap(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "namp" : "nmap", args);
+}
+
+function lsblk(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "dispart" : "lsblk", args);
+}
+
+function unmount(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "mountvol /d" : "unmount", args);
+}
+
+function service(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "sc" : "service", args);
+}
+
+function uptime(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "systeminfo" : "uptime", args);
+}
+
+function iostat(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "diskperf" : "iostat", args);
+}
+
+function badblocks(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "chkdsk" : "badblocks", args);
+}
+
+function fsck(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "chkdsk" : "fsck", args);
+}
+
+function mkfs(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "format" : "mkfs", args);
+}
+
+function fuser(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "handle" : "fuser", args);
+}
+
+function pgrep(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "Tasklist /FI" : "pgrep", args);
+}
+
+function stat(args) {
+  return bash("stat", args);
+}
+
+function unset(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "setx" : "unset", args);
+}
+
+function crontab(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "schtasks" : "crontab", args);
+}
+
+function dd(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "diskcopy" : "dd", args);
+}
+
+function free(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "systeminfo" : "free", args);
+}
+
+function watch(args) {
+  return bash("watch", args);
+}
+
+function ss(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "netstat" : "ss", args);
+}
+
+function nice(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "start /low" : "nice", args);
+}
+
+function renice(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "wmic process where" : "renice", args);
+}
+
+function lsmod(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "driverquery" : "lsmod", args);
+}
+
+function lscpu(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "wmic cpu get" : "lscpu", args);
+}
+
+function userdel(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "net user /delete" : "userdel", args);
+}
+
+function lsusb(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "devmgmt.msc" : "lsusb", args);
+}
+
+function lspci(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "devmgmt.msc" : "lspci", args);
+}
+
+function kill(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "taskkill" : "kill", args);
+}
+
 function tee(args) {
-  return bash("", args);
+  return bash("tee", args);
 }
 
 function tr(args) {
@@ -125,11 +273,11 @@ function tr(args) {
 }
 
 function wc(args) {
-  return bash("wc", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "find /c" : "wc", args);
 }
 
 function od(args) {
-  return bash("", args);
+  return bash("od", args);
 }
 
 function gzip(args) {
@@ -145,15 +293,15 @@ function gunzip(args) {
 }
 
 function locate(args) {
-  return bash("", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "dir /s /b" : "locate", args);
 }
 
 function date(args) {
-  return bash("", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "time" : "date", args);
 }
 
 function cal(args) {
-  return bash("", args);
+  return bash("cal", args);
 }
 
 function sleep(args) {
@@ -161,7 +309,7 @@ function sleep(args) {
 }
 
 function time(args) {
-  return bash("", args);
+  return bash("time", args);
 }
 
 function sort(args) {
@@ -177,11 +325,11 @@ function zcat(args) {
 }
 
 function rm(args) {
-  return bash("rm", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "del" : "rm", args);
 }
 
 function mv(args) {
-  return bash("mv", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "move" : "mv", args);
 }
 
 async function cpFileNode(args) {
@@ -193,15 +341,15 @@ async function cpNode(args) {
 }
 
 function cp(args) {
-  return bash("cp", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "copy" : "cp", args);
 }
 
 function df(args) {
-  return bash("", args);
+  return bash("df", args);
 }
 
 function mount(args) {
-  return bash("mount", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "dispart" : "mount", args);
 }
 
 function exit(args) {
@@ -209,11 +357,11 @@ function exit(args) {
 }
 
 function clear(args) {
-  return bash("clear", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "cls" : "clear", args);
 }
 
 function ip(args) {
-  return bash("ipconfig", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "ifconfig" : "ipconfig", args);
 }
 
 function ssh(args) {
@@ -237,7 +385,7 @@ function rmdir(args) {
 }
 
 function rename(args) {
-  return bash("", args);
+  return bash("rename", args);
 }
 
 function head(args) {
@@ -297,11 +445,23 @@ function whoami(args) {
 }
 
 function ln(args) {
-  return bash("ln", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "mklink" : "ln", args);
 }
 
 function pwd(args) {
-  return bash("pwd", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "chdir" : "pwd", args);
+}
+
+function man(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? args.splice(0, 1) + " /?" : "man", args);
+}
+
+function grep(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "find" : "grep", args);
+}
+
+function diff(args) {
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "fc" : "diff", args);
 }
 
 function tac(args) {
@@ -353,7 +513,7 @@ function uniq(args) {
 }
 
 function which(args) {
-  return bash("which", args);
+  return bash(["win32", "Windows_NT"].includes(SYSTEM) ? "where" : "which", args);
 }
 
 module.exports.set = Object.assign(set.prototype, to);
