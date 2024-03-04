@@ -139,7 +139,9 @@ Usage:
 
 Usage: 
 
+```
 .callbacks.search(d, f, searchPattern, flag = undefined)
+```
 
 `searchFiles` 
 
