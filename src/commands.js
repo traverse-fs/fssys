@@ -408,4 +408,3 @@ module.exports.which = Object.assign(which.prototype, to);
 
 module.exports.compose = compose;
 module.exports.pipe = pipe;
-
