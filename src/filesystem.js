@@ -19,14 +19,13 @@
 const path = require('path');
 const fs = require('fs');
 
-
 /**
  *
  *
  * @param {*} module_name
  * @return {*} 
  */
- function _getRequireOrImport(module_name) {
+function _getRequireOrImport(module_name) {
     if (process.versions.node.split('.')[0] > "14") {
         return import(module_name);
     }
@@ -50,7 +49,7 @@ function _isinbuilt(mod) {
  * @param {*} localGitDir
  */
 function _createFolders(localGitDir) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
         try {
             return fs.access(path.join(localGitDir), (e) => {
                 resolve(fs.mkdirSync(localGitDir, { recursive: true }));
@@ -74,7 +73,7 @@ function _createFolders(localGitDir) {
  * 
  */
 async function _writeFile(localPath, data, options) {
-    return new Promise(async function(resolve, reject) {
+    return new Promise(async function (resolve, reject) {
         try {
             options.logger("[require-urls]: filesystem.js: Writing fetched file to .jscache");
             console.log(localPath);
@@ -89,10 +88,10 @@ async function _writeFile(localPath, data, options) {
             throw new Error("[require-urls]: filesystem.js: ", e.toString());
         }
     })
-    
+
     // try {
     //     options.logger("[require-urls]: filesystem.js: Writing fetched file to .jscache", localPath);
-        
+
     //     // if (!localPath) {
     //     //     var createStream = fs.createWriteStream(localPath);
     //     //     createStream.end();
@@ -111,4 +110,3 @@ module.exports._isinbuilt = _isinbuilt;
 module.exports._createFolders = _createFolders;
 module.exports._writeFile = _writeFile;
 module.exports._registerNodeCache = _registerNodeCache;
-
