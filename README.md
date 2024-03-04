@@ -23,7 +23,7 @@ APIs to read write folder/files, fs util functions, traverse files and folder us
 Usage: 
 
 ```
-.\_isinbuilt(mod)
+._isinbuilt(mod)
 ```
 
 ##### .\_createFolders
@@ -31,7 +31,7 @@ Usage:
 Usage: 
 
 ```
-.\_createFolders(localGitDir)
+._createFolders(localGitDir)
 ```
 
 ##### .\_writeFile
@@ -39,7 +39,7 @@ Usage:
 Usage: 
 
 ```
-.\_writeFile(localPath, data, options)
+._writeFile(localPath, data, options)
 ```
 
 ## traverse-fs functions
@@ -168,7 +168,7 @@ read write folder/files
 Usage: 
 
 ```
-.utils.\_isinbuilt(mod)
+.utils._isinbuilt(mod)
 ```
 
 `_createFolders` 
@@ -176,7 +176,7 @@ Usage:
 Usage: 
 
 ```
-.utils.\_createFolders(localGitDir)
+.utils._createFolders(localGitDir)
 ```
 
 `_writeFile` 
@@ -184,7 +184,7 @@ Usage:
 Usage: 
 
 ```
-.utils.\_writeFile(localPath, data, options)
+.utils._writeFile(localPath, data, options)
 ```
 
 `_registerNodeCache` 
@@ -192,7 +192,7 @@ Usage:
 Usage: 
 
 ```
-.utils.\_registerNodeCache(localGitFileCacheUrl, options)
+.utils._registerNodeCache(localGitFileCacheUrl, options)
 ```
 
 `_writeFile` 
@@ -200,7 +200,7 @@ Usage:
 Usage: 
 
 ```
-.utils.\_writeFile(localPath, data, options)
+.utils._writeFile(localPath, data, options)
 ```
 
 ### Contributions
