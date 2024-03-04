@@ -61,7 +61,7 @@ function execute(cmd, options) {
  * @param {*} args
  * @return {*} 
  */
-function shellcmds(cmd, args) {
+function bash(cmd, args) {
   return execute([cmd, ...args.splice(0, args.length - 2)].join(" "), args[0]);
 }
 
@@ -102,79 +102,79 @@ const pipe = (f, g) => (args) => g(f(args));
 // Command Refs: https://www.javatpoint.com/linux-commands
 
 function set(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function ls(args) {
-  return shellcmds("ls", args);
+  return bash("ls", args);
 }
 
 function sed(args) {
-  return shellcmds("sed", args);
+  return bash("sed", args);
 }
 
 function tee(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function tr(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function wc(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function od(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function gzip(args) {
-  return shellcmds("tar", args);
+  return bash("tar", args);
 }
 
 function gunzip(args) {
-  return shellcmds("gunzip", args);
+  return bash("gunzip", args);
 }
 
 function locate(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function date(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function cal(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function sleep(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function time(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function sort(args) {
-  return shellcmds("sort", args);
+  return bash("sort", args);
 }
 
 function cat(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function zcat(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function rm(args) {
-  return shellcmds("rm", args);
+  return bash("rm", args);
 }
 
 function mv(args) {
-  return shellcmds("mv", args);
+  return bash("mv", args);
 }
 
 async function cpFileNode(args) {
@@ -186,163 +186,163 @@ async function cpNode(args) {
 }
 
 function cp(args) {
-  return shellcmds("mv", args);
+  return bash("mv", args);
 }
 
 function df(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function mount(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function exit(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function clear(args) {
-  return shellcmds("clear", args);
+  return bash("clear", args);
 }
 
 function ip(args) {
-  return shellcmds("ipconfig", args);
+  return bash("ipconfig", args);
 }
 
 function ssh(args) {
-  return shellcmds("ssh", args);
+  return bash("ssh", args);
 }
 
 function mail(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function ping(args) {
-  return shellcmds("ping", args);
+  return bash("ping", args);
 }
 
 function mkdir(args) {
-  return shellcmds("mkdir", args);
+  return bash("mkdir", args);
 }
 
 function rmdir(args) {
-  return shellcmds("rmdir", args);
+  return bash("rmdir", args);
 }
 
 function rename(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function head(args) {
-  return shellcmds("head", args);
+  return bash("head", args);
 }
 
 function tail(args) {
-  return shellcmds("tail", args);
+  return bash("tail", args);
 }
 
 function host(args) {
-  return shellcmds("host", args);
+  return bash("host", args);
 }
 
 function grep(args) {
-  return shellcmds("grep", args);
+  return bash("grep", args);
 }
 
 function comm(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function find(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function echo(args) {
-  return shellcmds("echo", args);
+  return bash("echo", args);
 }
 
 function popd(args) {
-  return shellcmds("popd", args);
+  return bash("popd", args);
 }
 
 function pushd(args) {
-  return shellcmds("pushd", args);
+  return bash("pushd", args);
 }
 
 function chmod(args) {
-  return shellcmds("chmod", args);
+  return bash("chmod", args);
 }
 
 function cd(args) {
-  return shellcmds("cd", args);
+  return bash("cd", args);
 }
 
 function touch(args) {
-  return shellcmds("touch", args);
+  return bash("touch", args);
 }
 
 function whoami(args) {
-  return shellcmds("whoami", args);
+  return bash("whoami", args);
 }
 
 function ln(args) {
-  return shellcmds("ln", args);
+  return bash("ln", args);
 }
 
 function pwd(args) {
-  return shellcmds("pwd", args);
+  return bash("pwd", args);
 }
 
 function tac(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function more(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function less(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function su(args) {
-  return shellcmds("su", args);
+  return bash("su", args);
 }
 
 function id(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function useradd(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function groupadd(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function cut(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function passwd(args) {
-  return shellcmds("passwd", args);
+  return bash("passwd", args);
 }
 
 function pwd(args) {
-  return shellcmds("pwd", args);
+  return bash("pwd", args);
 }
 
 function tempdir(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function uniq(args) {
-  return shellcmds("", args);
+  return bash("", args);
 }
 
 function which(args) {
-  return shellcmds("which", args);
+  return bash("which", args);
 }
 
 module.exports.set = Object.assign(set.prototype, to);
