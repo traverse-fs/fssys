@@ -22,19 +22,25 @@ APIs to read write folder/files, fs util functions, traverse files and folder us
 
 Usage: 
 
+```
 .\_isinbuilt(mod)
+```
 
 ##### .\_createFolders
 
 Usage: 
 
+```
 .\_createFolders(localGitDir)
+```
 
 ##### .\_writeFile
 
 Usage: 
 
+```
 .\_writeFile(localPath, data, options)
+```
 
 ## traverse-fs functions
 
@@ -44,49 +50,64 @@ Usage:
 
 Usage: 
 
+```
 .search(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
+```
 
 ##### .filter
 
 Usage: 
 
+```
 .filter(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
+```
 
 ##### .regex
 
 Usage: 
 
+```
 .regex(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { regex: "all", pattern: null, text: [] })
+```
 
 ##### .dir
 
 Usage: 
 
+```
 .dir(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options = { before: () => { }, after: () => { } })
+```
 
 ##### .returnNestedArray
 
 Usage: 
-
+```
 .returnNestedArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "nestedarray", options)
+```
 
 ##### .returnFlatArray
 
 Usage: 
 
+```
 .returnFlatArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "flatarray", options)
+```
 
 ##### .returnJSON
 
 Usage: 
 
+```
 .returnJSON(directory, recursive, fetchModifierCallback = defaultJSONFetch, handleProcessExit, errorHandler, type = "json", options)
+```
 
 ##### .cliargs
 
 Usage: 
 
+```
 .cliArgs(argList)
+```
 
 #### .callbacks.\_\_\_
 
@@ -94,19 +115,25 @@ Usage:
 
 Usage: 
 
+```
 .callbacks.defaultFetch(directory, fileDirent)
+```
 
 `jsonFetch` 
 
 Usage: 
 
+```
 .callbacks.jsonFetch(directory, fileDirent)
+```
 
 `errorHandler` 
 
 Usage: 
 
+```
 .callbacks.errorHandler(error)
+```
 
 `search` 
 
@@ -118,13 +145,17 @@ Usage:
 
 Usage: 
 
+```
 .callbacks.searchFiles(d, f, searchPattern, flag = undefined)
+```
 
 `searchFolder` 
 
 Usage: 
 
+```
 .callbacks.searchFolder(d, f, searchPattern, flag = undefined)
+```
 
 #### .utils.\_\_\_
 
@@ -134,31 +165,41 @@ read write folder/files
 
 Usage: 
 
+```
 .utils.\_isinbuilt(mod)
+```
 
 `_createFolders` 
 
 Usage: 
 
+```
 .utils.\_createFolders(localGitDir)
+```
 
 `_writeFile` 
 
 Usage: 
 
+```
 .utils.\_writeFile(localPath, data, options)
+```
 
 `_registerNodeCache` 
 
 Usage: 
 
+```
 .utils.\_registerNodeCache(localGitFileCacheUrl, options)
+```
 
 `_writeFile` 
 
 Usage: 
 
+```
 .utils.\_writeFile(localPath, data, options)
+```
 
 ### Contributions
 
