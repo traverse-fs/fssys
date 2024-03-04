@@ -62,7 +62,7 @@ function execute(cmd, options) {
  * @return {*} 
  */
 function shellcmds(cmd, args) {
-  return execute(cmd + " " + args.splice(0, args.length - 2), args[0]);
+  return execute([cmd, ...args.splice(0, args.length - 2)].join(" "), args[0]);
 }
 
 /**
@@ -329,6 +329,10 @@ function passwd(args) {
   return shellcmds("passwd", args);
 }
 
+function pwd(args) {
+  return shellcmds("pwd", args);
+}
+
 function tempdir(args) {
   return shellcmds("", args);
 }
@@ -360,6 +364,8 @@ module.exports.cat = Object.assign(cat.prototype, to);
 module.exports.zcat = Object.assign(zcat.prototype, to);
 module.exports.rm = Object.assign(rm.prototype, to);
 module.exports.mv = Object.assign(mv.prototype, to);
+module.exports.cpFileNode = Object.assign(cpFileNode.prototype, to);
+module.exports.cpNode = Object.assign(cpNode.prototype, to);
 module.exports.cp = Object.assign(cp.prototype, to);
 module.exports.df = Object.assign(df.prototype, to);
 module.exports.mount = Object.assign(mount.prototype, to);
