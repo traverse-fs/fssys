@@ -51,7 +51,7 @@ Usage:
 Usage: 
 
 ```
-.search(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
+.search(d, r, cb = searchCallback, pe, pef, type, options)
 ```
 
 ##### .filter
@@ -59,7 +59,7 @@ Usage:
 Usage: 
 
 ```
-.filter(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { search: "all", text: [] })
+.filter(d, r, cb = searchCallback, pe, pef, type, options)
 ```
 
 ##### .regex
@@ -67,7 +67,7 @@ Usage:
 Usage: 
 
 ```
-.regex(d, r, cb = searchCallback, pe, pef, type = "flatarray", options = { regex: "all", pattern: null, text: [] })
+.regex(d, r, cb = searchCallback, pe, pef, type, options)
 ```
 
 ##### .dir
@@ -75,14 +75,14 @@ Usage:
 Usage: 
 
 ```
-.dir(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options = { before: () => { }, after: () => { } })
+.dir(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options)
 ```
 
 ##### .returnNestedArray
 
 Usage: 
 ```
-.returnNestedArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "nestedarray", options)
+.returnNestedArray(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options)
 ```
 
 ##### .returnFlatArray
@@ -90,7 +90,7 @@ Usage:
 Usage: 
 
 ```
-.returnFlatArray(directory, recursive, fetchModifierCallback = defaultFetch, handleProcessExit, errorHandler, type = "flatarray", options)
+.returnFlatArray(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options)
 ```
 
 ##### .returnJSON
@@ -98,7 +98,7 @@ Usage:
 Usage: 
 
 ```
-.returnJSON(directory, recursive, fetchModifierCallback = defaultJSONFetch, handleProcessExit, errorHandler, type = "json", options)
+.returnJSON(directory, recursive, fetchModifierCallback, handleProcessExit, errorHandler, type, options)
 ```
 
 ##### .cliargs
