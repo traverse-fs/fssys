@@ -130,6 +130,10 @@ function od(args) {
 }
 
 function gzip(args) {
+  return bash("gzip", args);
+}
+
+function tar(args) {
   return bash("tar", args);
 }
 
@@ -353,6 +357,7 @@ module.exports.tr = Object.assign(tr.prototype, to);
 module.exports.wc = Object.assign(wc.prototype, to);
 module.exports.od = Object.assign(od.prototype, to);
 module.exports.gzip = Object.assign(gzip.prototype, to);
+module.exports.tar = Object.assign(tar.prototype, to);
 module.exports.gunzip = Object.assign(gunzip.prototype, to);
 module.exports.locate = Object.assign(locate.prototype, to);
 module.exports.date = Object.assign(date.prototype, to);
