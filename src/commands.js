@@ -17,7 +17,10 @@
 
 const path = require('path');
 const fs = require('fs');
+const os = require("os");
 var cp = require('child_process')
+
+var SYSTEM = os.platform;
 
 /**
  *
@@ -102,7 +105,7 @@ const pipe = (f, g) => (args) => g(f(args));
 // Command Refs: https://www.javatpoint.com/linux-commands
 
 function set(args) {
-  return bash("", args);
+  return bash("set", args);
 }
 
 function ls(args) {
@@ -118,11 +121,11 @@ function tee(args) {
 }
 
 function tr(args) {
-  return bash("", args);
+  return bash("tr", args);
 }
 
 function wc(args) {
-  return bash("", args);
+  return bash("wc", args);
 }
 
 function od(args) {
@@ -154,7 +157,7 @@ function cal(args) {
 }
 
 function sleep(args) {
-  return bash("", args);
+  return bash("sleep", args);
 }
 
 function time(args) {
@@ -166,11 +169,11 @@ function sort(args) {
 }
 
 function cat(args) {
-  return bash("", args);
+  return bash("cat", args);
 }
 
 function zcat(args) {
-  return bash("", args);
+  return bash("zcat", args);
 }
 
 function rm(args) {
@@ -190,7 +193,7 @@ async function cpNode(args) {
 }
 
 function cp(args) {
-  return bash("mv", args);
+  return bash("cp", args);
 }
 
 function df(args) {
@@ -198,11 +201,11 @@ function df(args) {
 }
 
 function mount(args) {
-  return bash("", args);
+  return bash("mount", args);
 }
 
 function exit(args) {
-  return bash("", args);
+  return bash("exit", args);
 }
 
 function clear(args) {
@@ -243,6 +246,10 @@ function head(args) {
 
 function tail(args) {
   return bash("tail", args);
+}
+
+function top(args) {
+  return bash("top", args);
 }
 
 function host(args) {
@@ -385,6 +392,7 @@ module.exports.rmdir = Object.assign(rmdir.prototype, to);
 module.exports.rename = Object.assign(rename.prototype, to);
 module.exports.head = Object.assign(head.prototype, to);
 module.exports.tail = Object.assign(tail.prototype, to);
+module.exports.top = Object.assign(top.prototype, to);
 module.exports.host = Object.assign(host.prototype, to);
 module.exports.grep = Object.assign(grep.prototype, to);
 module.exports.comm = Object.assign(comm.prototype, to);
